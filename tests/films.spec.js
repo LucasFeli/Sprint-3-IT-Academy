@@ -293,8 +293,51 @@ describe('Function "orderByYear"', () => {
 // Exercise 6
 // YOUR CODE HERE. Test moviesAverageByCategory()
 describe('Function "moviesAverageByCategory"', () => {
-  it('ADD YOUR CODE IN films.spec.js file', () => {
-    expect(typeof hoursToMinutes).toBe('coffee');
+  it('Calculates the average rating for movies in each category', () => {
+    const movies =[
+      {
+        title: 'The Shawshank Redemption',
+        year: 1994,
+        director: 'Frank Darabont',
+        duration: '2h 22min',
+        genre: ['Crime', 'Drama'],
+        score: 9.3
+      },
+      {
+        title: 'The Godfather',
+        year: 1972,
+        director: 'Francis Ford Coppola',
+        duration: '2h 55min',
+        genre: ['Crime', 'Drama'],
+        score: 9.2
+      },
+      {
+        title: 'Sen to Chihiro no kamikakushi',
+        year: 2001,
+        director: 'Hayao Miyazaki',
+        duration: '2h 5min',
+        genre: ['Animation', 'Adventure', 'Family', 'Fantasy', 'Mystery'],
+        score: 8.6
+      },
+      {
+        title: 'Psycho',
+        year: 1960,
+        director: 'Alfred Hitchcock',
+        duration: '1h 49min',
+        genre: ['Horror', 'Mystery', 'Thriller'],
+        score: 8.5
+      },
+      
+    ];
+
+    const expetedAverageByCategory = {
+      Mystery:8.55,
+      Drama:9.25,
+      
+    };
+    const resutl = moviesAverageByCategory(movies) 
+
+    expect(resutl).toBe(expetedAverageByCategory);
   });
 });
 
